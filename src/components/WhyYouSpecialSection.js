@@ -42,7 +42,7 @@ const WhyYouSpecialSection = () => {
       icon: '🔐',
       title: 'You\'re My Anchor',
       description: 'Steadfast, strong, and true. You ground me when the world spins.',
-      color: 'from-cardano-light to-blue-100',
+      color: 'from-rose-100 to-blue-100',
     },
   ];
 

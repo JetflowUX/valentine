@@ -11,7 +11,7 @@ const HeroSection = ({ onYes }) => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-12 sm:pt-20 pb-10">
       <div className="text-center max-w-3xl">
-        {/* Animated Heart/ADA Symbol */}
+        {/* Animated Heart Symbol */}
         <div
           className="mb-6 sm:mb-8 inline-block cursor-pointer"
           onMouseEnter={handleHeartHover}
