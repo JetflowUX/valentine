@@ -125,11 +125,11 @@ const MainSection = ({ onYes }) => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden px-2 py-2">
+    <div className="relative w-full min-h-screen overflow-hidden px-1 py-2 sm:px-2">
       {/* Background grid of cards */}
       <div className="absolute inset-0">
         <div
-          className="grid w-full h-full gap-2 p-2 sm:gap-2 sm:p-3 md:gap-3 md:p-4"
+          className="grid w-full h-full gap-1 p-1 sm:gap-2 sm:p-2 md:gap-3 md:p-4"
           style={{
             gridTemplateColumns: 'repeat(8, minmax(0, 1fr))',
             gridTemplateRows: 'repeat(6, minmax(0, 1fr))',
@@ -163,28 +163,28 @@ const MainSection = ({ onYes }) => {
         {showMain && (
           <div className="relative text-center max-w-3xl px-4">
             <div className="absolute inset-0 rounded-3xl glass-portal" />
-            <div className="relative p-6 sm:p-8 md:p-10 lg:p-12 rounded-3xl">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <div className="relative p-4 sm:p-6 md:p-10 lg:p-12 rounded-3xl">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
                 So… will you be my <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>Valentine?</span>
               </h2>
 
-              <div className="flex gap-3 justify-center flex-col md:flex-row">
+              <div className="flex gap-2 sm:gap-3 justify-center flex-col sm:flex-row">
                 <button
                   onClick={onYes}
-                  className="w-60 h-14 bg-white text-[#E1280B] font-bold text-lg rounded-full shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
+                  className="w-full sm:w-48 md:w-60 h-12 sm:h-14 bg-white text-[#E1280B] font-bold text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
                 >
                   Yes! ❤️
                 </button>
 
                 <button
                   onClick={onYes}
-                  className="w-60 h-14 border-2 border-white text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl hover:bg-white/10 hover:scale-105 active:scale-95 transition-all duration-300"
+                  className="w-full sm:w-48 md:w-60 h-12 sm:h-14 border-2 border-white text-white font-bold text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl hover:bg-white/10 hover:scale-105 active:scale-95 transition-all duration-300"
                 >
                   Of course! 😌
                 </button>
               </div>
 
-              <p className="text-white/80 mt-4 italic text-sm text-center">
+              <p className="text-white/80 mt-3 sm:mt-4 italic text-xs sm:text-sm text-center">
                 Spoiler: Both answers lead to the same happy ending 💕
               </p>
             </div>

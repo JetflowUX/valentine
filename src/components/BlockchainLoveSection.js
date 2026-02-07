@@ -40,19 +40,19 @@ const BlockchainLoveSection = () => {
   return (
     <section
       id="blockchain-love-section"
-      className="py-20 px-4 bg-gradient-to-b from-white via-red-100 to-rose-red"
+      className="py-12 sm:py-20 px-4 bg-gradient-to-b from-white via-red-100 to-rose-red"
     >
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-crimson-dark">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-crimson-dark">
           Love on the <span className="gradient-text">Blockchain</span>
         </h2>
 
         <div className="max-w-4xl mx-auto">
           {/* Connection visual */}
-          <div className="mb-12 text-center">
+          <div className="mb-8 sm:mb-12 text-center">
             <div className={`inline-block ${inView ? 'animate-pulse' : ''}`}>
               <svg
-                className="w-40 h-40 text-crimson/40 mx-auto drop-shadow-lg"
+                className="w-28 h-28 sm:w-40 sm:h-40 text-crimson/40 mx-auto drop-shadow-lg"
                 viewBox="0 0 100 100"
                 fill="none"
                 stroke="currentColor"
@@ -78,29 +78,29 @@ const BlockchainLoveSection = () => {
             {comparisons.map((item, index) => (
               <div
                 key={index}
-                className={`glass p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center gap-6 glow-box ${
+                className={`glass p-4 sm:p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center gap-4 sm:gap-6 glow-box ${
                   inView ? 'animate-slide-up' : 'opacity-0'
                 }`}
                 style={{
                   animationDelay: inView ? `${index * 0.15}s` : '0s',
                 }}
               >
-                <div className="text-5xl drop-shadow-lg transform transition-all duration-300 hover:scale-125">
+                <div className="text-3xl sm:text-5xl drop-shadow-lg transform transition-all duration-300 hover:scale-125">
                   {item.icon}
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <p className="text-sm font-bold text-crimson-dark uppercase tracking-wider mb-1 drop-shadow-sm">
+                  <p className="text-xs sm:text-sm font-bold text-crimson-dark uppercase tracking-wider mb-1 drop-shadow-sm">
                     {item.blockchain}
                   </p>
-                  <p className="text-2xl font-bold text-gray-800">{item.love}</p>
+                  <p className="text-lg sm:text-2xl font-bold text-gray-800">{item.love}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Love manifesto */}
-          <div className="mt-16 glass p-8 md:p-12 rounded-2xl text-center glow-box">
-            <p className="text-xl text-gray-700 leading-relaxed">
+          <div className="mt-12 sm:mt-16 glass p-6 sm:p-8 md:p-12 rounded-2xl text-center glow-box">
+            <p className="text-base sm:text-xl text-gray-700 leading-relaxed">
               Like the blockchain of love, our bond is <span className="font-bold text-crimson-dark">transparent</span>, 
               <span className="font-bold text-crimson-dark"> secure</span>, and built to 
               <span className="font-bold text-crimson-dark"> last forever</span>. 
