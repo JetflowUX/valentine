@@ -111,7 +111,7 @@ const MainSection = ({ onYes }) => {
         showText: Math.random() > 0.35,
       };
     });
-  }, [totalCards, reasons]);
+  }, [totalCards, reasons, alignments]);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowMain(true), 4000);
