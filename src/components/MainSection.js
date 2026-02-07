@@ -132,7 +132,6 @@ const MainSection = ({ onYes }) => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-`repeat(${cols}, minmax(0, 1fr))`
   return (
     <div className="relative w-full min-h-screen overflow-hidden px-1 py-2 sm:px-2">
       {/* Background grid of cards */}
@@ -140,24 +139,28 @@ const MainSection = ({ onYes }) => {
         <div
           className="grid w-full h-full gap-1 p-1 sm:gap-2 sm:p-2 md:gap-3 md:p-4"
           style={{
-            gridTemplateColumns: 'repeat(8, minmax(0, 1fr))',
+            gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
             gridTemplateRows: 'repeat(6, minmax(0, 1fr))',
           }}
         >
           {gridCards.map((card) => (
             <div
               key={card.id}
-              className={`grid-card fle9px] sm:text-[10px] md:text-xs leading-tight uppercase tracking-wide ${hoveredCard === card.id ? 'opacity-100' : 'opacity-80'}`}>
-                  <div className="text-white/90 font-semibold">{card.reason.title}</div>
-                  <div className="text-white/70 mt-0.5 sm:mt-1 normal-case tracking-normal text-[8px] sm:text-[9px]
+              className={`grid-card flex p-2 sm:p-2 md:p-3 ${card.alignment} animate-drift`}
+              style={{
+                animationDelay: card.delay,
               }}
               onMouseEnter={() => setHoveredCard(card.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               {card.showText && (
-                <div className={`text-[10px] md:text-xs leading-tight uppercase tracking-wide ${hoveredCard === card.id ? 'opacity-100' : 'opacity-80'}`}>
+                <div
+                  className={`text-[9px] sm:text-[10px] md:text-xs leading-tight uppercase tracking-wide ${
+                    hoveredCard === card.id ? 'opacity-100' : 'opacity-80'
+                  }`}
+                >
                   <div className="text-white/90 font-semibold">{card.reason.title}</div>
-                  <div className="text-white/70 mt-1 normal-case tracking-normal">
+                  <div className="text-white/70 mt-0.5 sm:mt-1 normal-case tracking-normal text-[8px] sm:text-[9px]">
                     {card.reason.description}
                   </div>
                 </div>
