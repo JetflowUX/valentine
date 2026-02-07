@@ -4,98 +4,104 @@ const MainSection = ({ onYes }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [showMain, setShowMain] = useState(false);
 
-  const reasons = [
-    {
-      id: 1,
-      icon: '✨',
-      title: 'You Make Me Smile',
-      description: 'Every moment with you lights up my world',
-    },
-    {
-      id: 2,
-      icon: '❤️',
-      title: 'You\'re My Safe Place',
-      description: 'In your arms, I find my home',
-      delay: '5s',
-    },
-    {
-      id: 3,
-      icon: '🏰',
-      title: 'You\'re My Forever',
-      description: 'With you, I see eternity',
-      delay: '10s',
-    },
-    {
-      id: 4,
-      icon: '🔐',
-      title: 'You\'re My Anchor',
-      description: 'Steadfast and true',
-      delay: '15s',
-    },
-    {
-      id: 5,
-      icon: '💫',
-      title: 'You Complete Me',
-      description: 'The missing piece of my heart',
-      delay: '20s',
-    },
-    {
-      id: 6,
-      icon: '🐝',
-      title: 'You\'re Amazing',
-      description: 'High integrity, high quality human',
-      delay: '25s',
-    },
-    {
-      id: 7,
-      icon: '🌟',
-      title: 'You\'re My Star',
-      description: 'You light up my darkest nights',
-      delay: '30s',
-    },
-    {
-      id: 8,
-      icon: '🎵',
-      title: 'You\'re My Song',
-      description: 'My heart sings with you',
-      delay: '35s',
-    },
-    {
-      id: 9,
-      icon: '🌹',
-      title: 'You\'re Beautiful',
-      description: 'Inside and out',
-      delay: '40s',
-    },
-    {
-      id: 10,
-      icon: '✈️',
-      title: 'My Adventure',
-      description: 'Let\'s explore forever together',
-      delay: '45s',
-    },
-    {
-      id: 11,
-      icon: '🎁',
-      title: 'My Greatest Gift',
-      description: 'You\'re all I ever needed',
-      delay: '50s',
-    },
-    {
-      id: 12,
-      icon: '🌈',
-      title: 'You\'re My Rainbow',
-      description: 'After every storm comes you',
-    },
-  ];
+  const reasons = useMemo(
+    () => [
+      {
+        id: 1,
+        icon: '✨',
+        title: 'You Make Me Smile',
+        description: 'Every moment with you lights up my world',
+      },
+      {
+        id: 2,
+        icon: '❤️',
+        title: 'You\'re My Safe Place',
+        description: 'In your arms, I find my home',
+        delay: '5s',
+      },
+      {
+        id: 3,
+        icon: '🏰',
+        title: 'You\'re My Forever',
+        description: 'With you, I see eternity',
+        delay: '10s',
+      },
+      {
+        id: 4,
+        icon: '🔐',
+        title: 'You\'re My Anchor',
+        description: 'Steadfast and true',
+        delay: '15s',
+      },
+      {
+        id: 5,
+        icon: '💫',
+        title: 'You Complete Me',
+        description: 'The missing piece of my heart',
+        delay: '20s',
+      },
+      {
+        id: 6,
+        icon: '🐝',
+        title: 'You\'re Amazing',
+        description: 'High integrity, high quality human',
+        delay: '25s',
+      },
+      {
+        id: 7,
+        icon: '🌟',
+        title: 'You\'re My Star',
+        description: 'You light up my darkest nights',
+        delay: '30s',
+      },
+      {
+        id: 8,
+        icon: '🎵',
+        title: 'You\'re My Song',
+        description: 'My heart sings with you',
+        delay: '35s',
+      },
+      {
+        id: 9,
+        icon: '🌹',
+        title: 'You\'re Beautiful',
+        description: 'Inside and out',
+        delay: '40s',
+      },
+      {
+        id: 10,
+        icon: '✈️',
+        title: 'My Adventure',
+        description: 'Let\'s explore forever together',
+        delay: '45s',
+      },
+      {
+        id: 11,
+        icon: '🎁',
+        title: 'My Greatest Gift',
+        description: 'You\'re all I ever needed',
+        delay: '50s',
+      },
+      {
+        id: 12,
+        icon: '🌈',
+        title: 'You\'re My Rainbow',
+        description: 'After every storm comes you',
+      },
+    ],
+    []
+  );
 
-  const alignments = [
-    'items-start justify-start text-left',
-    'items-start justify-end text-right',
-    'items-end justify-start text-left',
-    'items-end justify-end text-right',
-    'items-center justify-center text-center',
-  ];
+  const alignments = useMemo(
+    () => [
+      'items-start justify-start text-left',
+      'items-start justify-end text-right',
+      'items-end justify-start text-left',
+      'items-end justify-end text-right',
+      'items-center justify-center text-center',
+    ],
+    []
+  );
 
   const rows = 6;
   const cols = 8;
