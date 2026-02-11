@@ -21,19 +21,19 @@ const BlockchainLoveSection = () => {
 
   const comparisons = [
     {
-      blockchain: 'Decentralized',
-      love: 'Independent but Connected',
-      icon: '🌍',
+      blockchain: 'Thoughtful',
+      love: 'Little surprises that feel like home',
+      icon: '🎁',
     },
     {
-      blockchain: 'Secure',
-      love: 'Trust & Loyalty',
-      icon: '🔒',
+      blockchain: 'Steady',
+      love: 'Always there when it matters most',
+      icon: '🫶',
     },
     {
-      blockchain: 'Sustainable',
-      love: 'Long-term Love',
-      icon: '🌱',
+      blockchain: 'Growing',
+      love: 'Every day with you is better',
+      icon: '🌷',
     },
   ];
 
@@ -44,7 +44,7 @@ const BlockchainLoveSection = () => {
     >
       <div className="container mx-auto">
         <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-crimson-dark">
-          Love on the <span className="gradient-text">Blockchain</span>
+          Love in <span className="gradient-text">Real Life</span>
         </h2>
 
         <div className="max-w-4xl mx-auto">
@@ -101,10 +101,10 @@ const BlockchainLoveSection = () => {
           {/* Love manifesto */}
           <div className="mt-12 sm:mt-16 glass p-6 sm:p-8 md:p-12 rounded-2xl text-center glow-box">
             <p className="text-base sm:text-xl text-gray-700 leading-relaxed">
-              Like the blockchain of love, our bond is <span className="font-bold text-crimson-dark">transparent</span>, 
-              <span className="font-bold text-crimson-dark"> secure</span>, and built to 
-              <span className="font-bold text-crimson-dark"> last forever</span>. 
-              Every moment with you is eternally recorded in my heart.
+              Our love is <span className="font-bold text-crimson-dark">honest</span>,
+              <span className="font-bold text-crimson-dark"> steady</span>, and built to
+              <span className="font-bold text-crimson-dark"> last forever</span>.
+              Every moment with you is written into my heart.
             </p>
           </div>
         </div>

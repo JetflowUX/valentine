@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
-const MainSection = ({ onYes }) => {
+const MainSection = ({ name, onYes }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [showMain, setShowMain] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const namePrefix = name && name.trim() ? `${name.trim()}, ` : '';
 
   const reasons = useMemo(
     () => [
@@ -177,7 +178,7 @@ const MainSection = ({ onYes }) => {
             <div className="absolute inset-0 rounded-3xl glass-portal" />
             <div className="relative p-4 sm:p-6 md:p-10 lg:p-12 rounded-3xl">
               <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
-                So… will you be my <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>Valentine?</span>
+                So… {namePrefix}will you be my <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>Valentine?</span>
               </h2>
 
               <div className="flex gap-2 sm:gap-3 justify-center flex-col sm:flex-row">
